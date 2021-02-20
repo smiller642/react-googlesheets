@@ -1,3 +1,4 @@
+import axios from 'axios'
 import React, { Component } from 'react'
 import { Button , Form, Container, Header } from 'semantic-ui-react'
 import logo from './logo.svg';
@@ -19,9 +20,14 @@ export default class App extends Component {
     this.setState({[e.target.name] : e.target.value})
   }
 
-  submitHandler = e => {
+submitHandler = e => {
     e.preventDefault();
     console.log(this.state);
+
+    axios.post('https://sheet.best/api/sheets/c4c2f0d1-d0e1-443c-be61-de476fae81e1', this.state)
+    .then(response => {
+      console.log(response);
+    })
   }
 
   render() {
