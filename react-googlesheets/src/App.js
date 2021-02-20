@@ -16,7 +16,7 @@ export default class App extends Component {
     }
   }
 
-  changeHandler = (e) => {
+  changeHandler = e => {
     this.setState({[e.target.name] : e.target.value})
   }
 
