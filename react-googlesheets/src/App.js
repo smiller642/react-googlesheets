@@ -16,11 +16,11 @@ export default class App extends Component {
     }
   }
 
-  changeHandler = (e) => {
+  changeHandler= (e) => { // eslint-disable-line null
     this.setState({[e.target.name] : e.target.value})
   }
 
-submitHandler = e => {
+submitHandler= (e) => { // eslint-disable-line null
     e.preventDefault();
     console.log(this.state);
 
